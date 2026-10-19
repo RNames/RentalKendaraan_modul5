@@ -1,17 +1,15 @@
 package controller;
 
+import java.util.List;
+
 import model.Kendaraan;
-import model.Penyewaan;
+import model.KendaraanFactory;
 import model.KendaraanRepository;
+import model.Penyewaan;
 import model.PenyewaanRepository;
 import view.RentalView;
 import view.StrukView;
-import java.util.List;
-import model.KendaraanFactory;
-z
-//[SRP] Satu tanggung jawab: mengatur alur aplikasi
-//menerima pilihan dari View, memvalidasi, memanggil Model, mengirim hasil ke View.
-//Tidak menyimpan data sendiri, tidak memformat struk, tidak menghitung tarif. 
+
 public class RentalController {
         private final KendaraanRepository kendaraanRepo = new KendaraanRepository();
         private final PenyewaanRepository penyewaanRepo = new PenyewaanRepository();

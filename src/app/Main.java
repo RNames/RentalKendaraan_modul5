@@ -1,11 +1,11 @@
-package app;
+package App;
 
 // import model.Kendaraan;
 import controller.RentalController;
-import model.Mobil;
-import model.Motor;
 import model.Minibus;
+import model.Mobil;
 import model.MobilPremium;
+import model.Motor;
 
 public class Main {
         public static void main(String[] args) {

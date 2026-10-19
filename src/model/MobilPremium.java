@@ -9,27 +9,31 @@ Pemilik rental ingin menambah Mobil Premium (misalnya Alphard) dengan dua aturan
 - minimal disewa 3 hari, 
 - dan ada asuransi premium tambahan Rp100.000
 */
+
 public class MobilPremium extends Mobil {
-        private static final long ASURANSI_PREMIUM = 100000;
-        private static final int MINIMAL_HARI = 3;
+    private static final long ASURANSI_PREMIUM = 100000;
+    private static final int MINIMAL_HARI = 3;
 
-        public MobilPremium(String platNomor, String merk, long tarifPerHari) {
-                super(platNomor, merk, tarifPerHari);
-        }
+    public MobilPremium(
+        String platNomor,
+        String merk,
+        long tarifPerHari
+    ) {
+        super(platNomor, merk, tarifPerHari);
+    }
 
-        @Override
-        public String getJenis() {
-                return "PREMIUM";
-        }
+    @Override
+    public String getJenis() {
+        return "PREMIUM";
+    }
 
-        @Override
-        public int getMinimalHari() {
-                return MINIMAL_HARI;
-        }
+    @Override
+    public int getMinimalHari() {
+        return MINIMAL_HARI;
+    }
 
-        //[LSP] hasil selalu biaya > 0 sesuai kontrak induk.
-        @Override
-        public long hitungBiaya(int hari) {
-                return super.hitungBiaya(hari) + ASURANSI_PREMIUM;
-        }
+    @Override
+    public long hitungBiaya(int hari) {
+        return super.hitungBiaya(hari) + ASURANSI_PREMIUM;
+    }
 }
